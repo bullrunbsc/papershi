@@ -1,0 +1,543 @@
+/* Style updates for the new trading panel design matching Axiom */
+
+.axiom-style-token-detail {
+  --background-primary: #0B0B0B;
+  --background-secondary: #111111;
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-tertiary: rgba(255, 255, 255, 0.5);
+  --border-color: rgba(80, 80, 80, 0.2);
+  --positive-color: #4AE3B5;
+  --negative-color: #FF5C5C;
+  --button-bg: #4AE3B5;
+  --button-text: #111111;
+  --purple-highlight: #5B4CDB;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+/* Token Detail Page Layout */
+.axiom-style-token-detail .main-content {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 0;
+  height: 100vh;
+}
+
+/* Chart Container */
+.axiom-style-token-detail .chart-container {
+  height: calc(100vh - 200px);
+  background-color: var(--background-primary);
+  overflow: hidden;
+  border-right: 1px solid var(--border-color);
+}
+
+.axiom-style-token-detail .token-chart {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Trading Container */
+.axiom-style-token-detail .trading-container {
+  height: calc(100vh - 200px);
+  background-color: var(--background-secondary);
+}
+
+/* Trading Panel */
+.axiom-style-token-detail .trading-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--background-secondary);
+  border-left: 1px solid var(--border-color);
+}
+
+/* Volume Stats Bar */
+.axiom-style-token-detail .volume-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+  border-bottom: 1px solid rgba(80, 80, 80, 0.2);
+}
+
+.axiom-style-token-detail .volume-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.axiom-style-token-detail .stat-label {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-bottom: 2px;
+}
+
+.axiom-style-token-detail .stat-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.axiom-style-token-detail .stat-value.buys {
+  color: var(--positive-color);
+}
+
+.axiom-style-token-detail .stat-value.sells {
+  color: var(--negative-color);
+}
+
+.axiom-style-token-detail .stat-value.positive {
+  color: var(--positive-color);
+}
+
+.axiom-style-token-detail .stat-value.negative {
+  color: var(--negative-color);
+}
+
+/* Trading Tabs */
+.axiom-style-token-detail .trading-tabs {
+  display: flex;
+  border-bottom: 1px solid rgba(80, 80, 80, 0.15);
+  background-color: var(--background-secondary);
+}
+
+.axiom-style-token-detail .tab-button {
+  background: none;
+  border: none;
+  color: var(--text-tertiary);
+  padding: 12px 0;
+  flex: 1;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 2px solid transparent;
+}
+
+.axiom-style-token-detail .tab-button.active {
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--text-primary);
+}
+
+/* Trading Content */
+.axiom-style-token-detail .trading-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Amount Section */
+.axiom-style-token-detail .amount-section {
+  margin-bottom: 5px;
+}
+
+.axiom-style-token-detail .amount-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+.axiom-style-token-detail .amount-input {
+  display: flex;
+  align-items: center;
+  background-color: rgba(20, 20, 20, 0.8);
+  border-radius: 4px;
+  padding: 0 10px;
+  height: 40px;
+}
+
+.axiom-style-token-detail .amount-input input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 16px;
+  padding: 0;
+  outline: none;
+}
+
+.axiom-style-token-detail .token-selector {
+  background: none;
+  border: none;
+  color: var(--text-tertiary);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Amount Presets */
+.axiom-style-token-detail .amount-presets {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+}
+
+.axiom-style-token-detail .amount-presets button {
+  background-color: rgba(30, 30, 30, 0.8);
+  border: none;
+  color: var(--text-secondary);
+  padding: 8px 0;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.axiom-style-token-detail .amount-presets button:hover {
+  background-color: rgba(50, 50, 50, 0.8);
+}
+
+.axiom-style-token-detail .custom-amount {
+  background-color: rgba(40, 40, 40, 0.8) !important;
+}
+
+/* Trading Parameters */
+.axiom-style-token-detail .trading-parameters {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.axiom-style-token-detail .parameter {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.axiom-style-token-detail .parameter-icon {
+  font-size: 12px;
+}
+
+/* Buy/Sell Button */
+.axiom-style-token-detail .buy-button {
+  padding: 12px;
+  text-align: center;
+  background-color: var(--button-bg);
+  border-radius: 50px;
+  color: var(--button-text);
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Portfolio Status */
+.axiom-style-token-detail .portfolio-status {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(80, 80, 80, 0.15);
+  border-bottom: 1px solid rgba(80, 80, 80, 0.15);
+  padding: 10px 0;
+}
+
+.axiom-style-token-detail .status-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+}
+
+.axiom-style-token-detail .status-label {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-bottom: 3px;
+}
+
+.axiom-style-token-detail .status-value {
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.axiom-style-token-detail .status-value.bought {
+  color: var(--positive-color);
+}
+
+.axiom-style-token-detail .status-value.sold {
+  color: var(--negative-color);
+}
+
+.axiom-style-token-detail .status-value.positive {
+  color: var(--positive-color);
+}
+
+.axiom-style-token-detail .status-value.negative {
+  color: var(--negative-color);
+}
+
+/* Token Info Section */
+.axiom-style-token-detail .token-info-section {
+  margin-top: 10px;
+}
+
+.axiom-style-token-detail .token-info-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-size: 14px;
+  color: var(--text-primary);
+  border-bottom: 1px solid rgba(80, 80, 80, 0.15);
+  margin-bottom: 10px;
+}
+
+.axiom-style-token-detail .toggle-icon {
+  font-size: 10px;
+  color: var(--text-tertiary);
+}
+
+.axiom-style-token-detail .token-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.axiom-style-token-detail .token-info-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.axiom-style-token-detail .token-info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.axiom-style-token-detail .info-icon {
+  font-size: 14px;
+}
+
+.axiom-style-token-detail .info-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.axiom-style-token-detail .info-value.positive {
+  color: var(--positive-color);
+}
+
+.axiom-style-token-detail .info-value.negative {
+  color: var(--negative-color);
+}
+
+.axiom-style-token-detail .info-label {
+  font-size: 11px;
+  color: var(--text-tertiary);
+}
+
+/* Markets Section */
+.axiom-style-token-detail .markets-section {
+  background-color: var(--background-primary);
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.axiom-style-token-detail .section-title {
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.axiom-style-token-detail .markets-table-container {
+  padding: 0 15px 10px;
+}
+
+.axiom-style-token-detail .markets-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.axiom-style-token-detail .markets-table th {
+  text-align: left;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.axiom-style-token-detail .markets-table td {
+  padding: 8px;
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.axiom-style-token-detail .dex-column {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.axiom-style-token-detail .dex-icon {
+  width: 10px;
+  height: 10px;
+  background-color: var(--purple-highlight);
+  border-radius: 50%;
+}
+
+.axiom-style-token-detail .dex-icon.pump {
+  background-color: var(--purple-highlight);
+}
+
+/* Top Traders Section */
+.axiom-style-token-detail .top-traders-section {
+  background-color: var(--background-primary);
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.axiom-style-token-detail .no-traders {
+  text-align: center;
+  color: var(--text-tertiary);
+  padding: 20px 0;
+}
+
+/* Hide unnecessary sections */
+.axiom-style-token-detail .token-data-section, 
+.axiom-style-token-detail .token-details-section, 
+.axiom-style-token-detail .traders-section {
+  display: none;
+}
+
+/* Updated token header styling to match screenshot */
+.token-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a0a0a;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(80, 80, 80, 0.2);
+}
+
+.token-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.token-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e1e;
+  flex-shrink: 0;
+  border: 1px solid rgba(80, 80, 80, 0.3);
+}
+
+.token-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.token-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.token-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.token-subname {
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.token-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.token-action-link {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.2s;
+}
+
+.token-action-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.token-header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.token-price-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.token-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.price-change {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.price-change.positive {
+  color: #4CAF50;
+}
+
+.price-change.negative {
+  color: #F44336;
+}
+
+.token-metrics-row {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 2px;
+}
+
+.metric-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Make sure these styles are added to your axiom-token.css file */
